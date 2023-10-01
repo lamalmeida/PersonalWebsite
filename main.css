@@ -189,6 +189,7 @@ footer{
   }
   .main-right{
     float: none;
+    margin: 6em 3em 3em -7.8em;
   }
   .main-picture{
     width: 35em;
