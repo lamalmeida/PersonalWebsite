@@ -64,6 +64,9 @@ nav{
   float: right;
   margin-left: auto; 
 }
+.nav-small{
+  display: none;
+}
 .option {
   display: inline;
   font-weight: 400;
@@ -99,7 +102,6 @@ header{
 /*MAIN*/
 main{
   grid-column: 2/12;
-  grid-template-columns: 100%;
 }
 article{
   display: flex;
@@ -181,22 +183,46 @@ footer{
 @media screen and (max-width: 700px) {
   nav{
     margin-bottom: 1em;
+    flex-direction: column;
   }
   .nav-left{
-    margin-top: 0em;
+    display: none
   }
   .nav-right{
-    margin-top: 0em;
+    display: none
   }
   .nav-center{
-    margin-top: 2.3em;
+    margin: 0 auto 0 auto;
+  }
+  .nav-small{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
   }
   .option{
     display: block
   }
+  .profile-picture{
+    width: 20em;
+    height: 20em;
+    border-radius: 100em;
+    margin: 3em auto 0 auto;
+  }
+  main{
+    grid-column: 1/13;
+    padding: 1em
+  }
   .main-text{
     margin-left: 0;
     margin-right: 0;
+  }
+  .main-img{
+    margin: 3em 0 3em 0;
+  }
+  .main-picture{
+    width: 100%;
+    border-radius: 5em;
+    object-fit: cover;
   }
 }
 /* ANIMATIONS */
@@ -213,7 +239,7 @@ footer{
 ::-webkit-scrollbar {
   display: none;
 }
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 0px) {
   h1 {
       font-size: calc(36px + 36* ((100vw - 320px) / 680));
   }
@@ -221,7 +247,7 @@ footer{
       font-size: calc(24px + 30 * ((100vw - 320px) / (680)));
   }
   h3 {
-      font-size: calc(18px + 18 * ((100vw - 320px) / (680)));
+      font-size: calc(20px + 20 * ((100vw - 320px) / (680)));
   }
   h4 {
       font-size: calc(18px + 6 * ((100vw - 320px) / (680)));
