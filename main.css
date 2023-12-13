@@ -40,21 +40,18 @@ a {
 html{
   color: var(--black);
   background: var(--white);
-  padding: 3vw 0vw;
+  padding: 3vw 5vw;
   animation: 1s ease-in fade-in;
 }
 body{
   font-family: var(--system-ui);
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  display: grid;
 }
 /*NAVBAR*/
 nav{
   display: flex;
-  margin-bottom: 3em;
+  margin-bottom: 2vw;
   line-height: 3em;
   justify-content: space-between;
-  grid-column: 2/12;
 }
 .nav-left{
   float: left;
@@ -81,42 +78,36 @@ nav{
 /*HEADER*/
 header{
   display: flex;
-  grid-column: 2/12; 
   align-items: center;
   justify-content: space-between;
 }
 .head-left{
   float: left;
-  margin: 0em 1em 0em 1em;
+  margin: 2vw;
 }
 .head-right{
   float: right;
-  margin: 0em 1em 0em 1em;
+  margin: 2vw;
 }
 .profile-picture{
   height: 25em;
   width: 25em;
   border-radius: 100em;
-  margin-right: 3em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 /*MAIN*/
-main{
-  grid-column: 2/12;
-}
 article{
   display: flex;
-  grid-column: 2/12;
   align-items: center;
-  justify-content: space-between;
 }
 .main-img{
   float: right;
-  margin: 3em;
+  margin: 2vw;
   text-align: center;
 }
 .main-text{
   float: left;
-  margin: 3em;
+  margin: 2vw;
   text-align: center;
 }
 .main-picture{
@@ -124,10 +115,36 @@ article{
   width: 25em;
   border-radius: 5em;
   object-fit: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card{
+  float: right;
+  margin: 2vw;
+  text-align: center;
+  background-color: #dedcd887;
+  padding: 1vw;
+  border-radius: 5vw;
+  width: 23vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-image{
+  height: 100%;
+  width: 100%;
+  border-radius: 4vw;
+  object-fit: cover;
+}
+.previous{
+  background-color: var(--black);
+  opacity: 0.6;
+  color: var(--white);
+  padding: 1em 2em;
+  border-radius: 5em;
+  display: flex;
+  width: fit-content;
+  margin: 1em 3em;
 }
 /*FOOTER*/
 footer{
-  grid-column: 2/12;
   display: flex;
   justify-content: space-between;
   line-height: 3em;
@@ -146,38 +163,30 @@ footer{
 }
 .icons {
   height: 1.5em;
-  opacity: 0.5;
+  opacity: 0.6;
   transition: 0.28s;
   margin-left: 1em;
 }
-.scroll-to-top {
-  position: fixed;
-  bottom: 4em;
-  right: 4em;
-  z-index: 99;
-  width: 1.5em;
-  height: 1.5em;
-  cursor: pointer;
-  outline: none !important;
-  background: url(Images/arrow-up.png) center / contain no-repeat;
-  opacity: 0.45;
-}
-
 @media screen and (max-width: 1200px) {
+  .card{
+    width: 37.8vw;
+    display:block;
+  }
+}
+@media screen and (max-width: 1000px) {
   header{
     flex-direction: column;
   }
   .profile-picture{
     margin: 4em auto 2em auto;
   }
-  .article{
-    flex-direction: column;
-  }
   article{
     flex-direction: column-reverse;
   }
   .main-picture{
-    width: 35em;
+    width: 80vw;
+    height: 40vw;
+    
   }
 }
 @media screen and (max-width: 700px) {
@@ -209,7 +218,6 @@ footer{
     margin: 3em auto 0 auto;
   }
   main{
-    grid-column: 1/13;
     padding: 1em
   }
   .main-text{
@@ -223,6 +231,11 @@ footer{
     width: 100%;
     border-radius: 5em;
     object-fit: cover;
+  }
+  .card{
+    width: 90%;
+    display:block;
+    margin: 5px 0;
   }
 }
 /* ANIMATIONS */
